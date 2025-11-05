@@ -1,134 +1,185 @@
-<!-- file: index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Archon's Favorite Artists</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arlen Nagata — Cybersecurity Professional</title>
+  <meta name="description" content="Resume website for Arlen Nagata: cybersecurity instructor, coach, and IT professional.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <style>
-    /* Basic styling for the website */
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f9;
-      color: #333;
+    :root {
+      --bg: #0b0b10;
+      --card: #12121a;
+      --ink: #e8e8ee;
+      --ink-dim: #b9b9c7;
+      --brand: #7c3aed;
+      --brand-ink: #e9d5ff;
+      --accent: #8b5cf6;
+      --chip: #1b1b26;
     }
-
-    header {
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      color: white;
-    }
-
-    main {
-      padding: 20px;
-    }
-
-    section {
-      margin-bottom: 20px;
-      padding: 15px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    h1, h2 {
-      color: #4CAF50;
-    }
-
-    .vote-button {
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .vote-button:hover {
-      background-color: #45a049;
-    }
-
-    .votes {
-      font-weight: bold;
-      color: #333;
-    }
-
-    footer {
-      text-align: center;
-      padding: 10px;
-      background-color: #333;
-      color: white;
-      margin-top: 20px;
-    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: var(--bg); color: var(--ink); }
+    a { color: var(--brand-ink); }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 18px 60px; }
+    header { display: grid; grid-template-columns: 120px 1fr; gap: 22px; align-items: center; }
+    header img { width: 120px; height: auto; border-radius: 16px; border: 2px solid var(--accent); box-shadow: 0 6px 24px rgba(0,0,0,.35); }
+    h1 { font-size: clamp(28px, 3.6vw, 44px); margin: 0; letter-spacing: .2px; }
+    .subtitle { color: var(--ink-dim); margin-top: 4px; }
+    .contacts { display:flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+    .chip { background: var(--chip); border: 1px solid #2a2a3a; padding: 8px 12px; border-radius: 999px; font-size: 14px; }
+    .grid { display: grid; gap: 20px; }
+    @media (min-width: 880px) { .grid-2 { grid-template-columns: 2fr 1fr; } }
+    section { background: var(--card); border: 1px solid #1e1e2b; border-radius: 18px; padding: 20px; }
+    section h2 { margin: 0 0 10px; font-size: 20px; color: var(--brand-ink); }
+    ul { margin: 8px 0 0 20px; line-height: 1.55; }
+    li { margin: 6px 0; }
+    .kicker { text-transform: uppercase; letter-spacing: .14em; color: var(--ink-dim); font-weight: 600; font-size: 12px; }
+    footer { margin-top: 24px; color: var(--ink-dim); font-size: 14px; text-align: center; }
+    .taglist span { display:inline-block; margin:6px 6px 0 0; padding:6px 10px; border-radius:10px; background:#1b1330; border:1px solid #2d1f55; }
   </style>
 </head>
 <body>
-  <!-- Header Section -->
-  <header>
-    <h1>Archon's Favorite Artists</h1>
-    <p>Vote for your favorite artist below!</p>
-  </header>
+  <div class="wrap">
+    <header>
+      <img src="assets/photo.jpg" alt="Photo of Arlen Nagata">
+      <div>
+        <h1>Arlen Nagata</h1>
+        <div class="subtitle">Cybersecurity Instructor • Coach • IT Professional</div>
+        <div class="contacts">
+          <span class="chip">📞 808.232.7921</span>
+          <span class="chip">✉️ <a href="mailto:arlen@arlennagata.com">arlen@arlennagata.com</a></span>
+          <span class="chip">🔗 <a href="https://linkedin.com/arlennagata" target="_blank" rel="noopener">linkedin.com/arlennagata</a></span>
+        </div>
+      </div>
+    </header>
 
-  <!-- Main Content -->
-  <main>
-    <!-- Artist List -->
-    <div id="artist-list">
-      <!-- Artists will be dynamically added here -->
-    </div>
-  </main>
+    <main class="grid grid-2">
+      <section>
+        <div class="kicker">Professional Summary</div>
+        <p>From clergy to education to cyber. 3 years in IT and 20+ years of leadership and teaching. Discovered cybersecurity by coaching a school CyberPatriot team. Recently CompTIA and GIAC certified cybersecurity professional and lifelong learner who excels at teaching, optimizing processes, professional communication, and creative problem solving. Seeking to transition deeper into the cybersecurity field.</p>
+      </section>
 
-  <!-- Footer Section -->
-  <footer>
-    <p>&copy; 2023 Archon's Favorite Artists</p>
-  </footer>
+      <section>
+        <div class="kicker">Highlights</div>
+        <ul>
+          <li>SANS Cyber Diversity Academy (2023 cohort)</li>
+          <li>TryHackMe top 1% (@ArchonBlue)</li>
+          <li>2nd Place — Polarity.io Triage Tournament (Apr 20, 2023)</li>
+        </ul>
+      </section>
 
-  <script>
-    // JavaScript to handle voting and sorting
+      <section>
+        <h2>Cyber Projects & Coaching</h2>
+        <ul>
+          <li><strong>Small Business Network Planning</strong> — Planned and implemented mesh networks for three businesses and integrated a NETGEAR firewall.</li>
+          <li><strong>US CyberPatriot Coach & Mentor</strong> — Expanded the program and achieved top placements:
+            <ul>
+              <li>2023: Gold Div 2nd (HI HS), Silver Div 1st (HI HS), Middle School 3rd</li>
+            </ul>
+          </li>
+          <li><strong>Student Cybersecurity CTF Coach & Mentor</strong> — Trained students to excel:
+            <ul>
+              <li>2023: ISC2 Hawaii Invitational — 1st (HS)</li>
+              <li>2023: AFCEA TechNet Indo-Pacific — 1st (HS)</li>
+              <li>2024: ISC2 Hawaii Invitational — 3rd (HS)</li>
+              <li>2024: Cyber Forensic Five-O — 3rd (HS)</li>
+              <li>2024: AFCEA TechNet Indo-Pacific — 4th (HS)</li>
+              <li>2025: AFCEA TechNet Indo-Pacific — 3rd (HS)</li>
+              <li>2025: Cyber Forensic Five-O — 2nd (Open)</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
 
-    // Artist data
-    const artists = [
-      { name: "Chris Tomlin", description: "Chris Tomlin is one of the most well-known Christian artists in the world. He has written and performed many worship songs that are sung in churches everywhere. Some of his most popular songs include 'How Great Is Our God,' 'Good Good Father,' and 'Our God.'", votes: 0 },
-      { name: "Jeremy Camp", description: "Jeremy Camp is a Christian singer and songwriter who has inspired millions with his music. His songs often reflect his personal journey of faith and hope. Popular songs by Jeremy Camp include 'I Still Believe,' 'Walk by Faith,' and 'There Will Be a Day.'", votes: 0 },
-      { name: "Phil Wickham", description: "Phil Wickham is a worship leader and songwriter known for his powerful voice and heartfelt lyrics. His music encourages people to connect with God. Some of his well-loved songs are 'Living Hope,' 'This Is Amazing Grace,' and 'Battle Belongs.'", votes: 0 }
-    ];
+      <section>
+        <h2>Education & Certifications</h2>
+        <ul>
+          <li><strong>SANS Cyber Diversity Academy</strong> (Selected 2023)
+            <ul>
+              <li>GSEC — DoD 8140 IAT II, TECH II</li>
+              <li>GCIH — DoD 8140 IAT III, CSSP Analyst / Incident Handler</li>
+              <li>GCIA — DoD 8140 IAT III, CSSP Analyst / Incident Handler</li>
+            </ul>
+          </li>
+          <li><strong>CompTIA</strong>: A+ CE (Jun 2021), Security+ CE (Jul 2024), SME (Aug 2023)</li>
+          <li><strong>M.A. Religion</strong>, International College and Graduate School (2001)</li>
+          <li><strong>B.A. Biblical Studies &amp; Youth Ministry</strong>, Simpson College (1997)</li>
+        </ul>
+      </section>
 
-    // Function to render the artist list
-    function renderArtists() {
-      const artistList = document.getElementById("artist-list");
-      artistList.innerHTML = ""; // Clear the current list
+      <section>
+        <h2>Relevant Experience</h2>
+        <h3>Computer Science Teacher &amp; Tech Coordinator — Hanalani Schools (2021–present)</h3>
+        <ul>
+          <li>Created engaging curriculum for grades 4–12: cybersecurity, coding, web design, social media marketing, and graphic design.</li>
+          <li>Taught AP CS Principles (JavaScript); student AP scores exceeded state &amp; national averages.</li>
+          <li>Standardized and monitored a 26‑station lab; supported 100+ users.</li>
+          <li>Administered 400 user accounts across AD, Google Workspace, and Microsoft 365; promoted 2FA.</li>
+          <li>Implemented SSO, reducing password resets and inefficiencies.</li>
+          <li>Provided courteous Help Desk support for grades 7–12.</li>
+        </ul>
 
-      // Sort artists by votes in descending order
-      artists.sort((a, b) => b.votes - a.votes);
+        <h3>Business Owner — HawaiiWP.com LLC (2012–present)</h3>
+        <ul>
+          <li>Built and managed cloud servers (Linode/DigitalOcean): deploy, patch, monitor, decommission.</li>
+          <li>Streamlined security patching across servers and software; managed dev hardware.</li>
+          <li>Designed hundreds of WordPress sites; ran Zendesk for support.</li>
+          <li>Handled taxes, billing, and subcontractors.</li>
+        </ul>
 
-      // Create a section for each artist
-      artists.forEach((artist, index) => {
-        const section = document.createElement("section");
-        section.innerHTML = `
-          <h2>${artist.name}</h2>
-          <p>${artist.description}</p>
-          <p class="votes">Votes: ${artist.votes}</p>
-          <button class="vote-button" onclick="vote(${index})">Vote</button>
-        `;
-        artistList.appendChild(section);
-      });
-    }
+        <h3>Instructional Support Specialist — Kamehameha Schools (2016–2017)</h3>
+        <ul>
+          <li>Authored documentation, tutorials, and screencasts to standardize outcomes.</li>
+          <li>Assisted with instructional design for a multi‑year Hawaiian language course.</li>
+          <li>Provided professional support for Blackboard LMS.</li>
+        </ul>
 
-    // Function to handle voting
-    function vote(index) {
-      artists[index].votes++; // Increment the vote count for the selected artist
-      renderArtists(); // Re-render the artist list
-    }
+        <h3>Assistant Tech Coordinator — Waianae Intermediate School (2014–2016)</h3>
+        <ul>
+          <li>Asset‑managed and inventoried computers and peripherals; created a reliable replacement‑cycle DB.</li>
+          <li>Deployed 900 iPads, 500 Chromebooks, and 100 MacBooks using reproducible processes.</li>
+          <li>Standardized 3,000+ user accounts via Google Workspace and other services.</li>
+        </ul>
+      </section>
 
-    // Initial render
-    renderArtists();
-  </script>
+      <section>
+        <h2>Competencies &amp; Skills</h2>
+        <div class="kicker">Cybersecurity</div>
+        <p class="taglist">
+          <span>nmap</span><span>SiLK</span><span>Snort</span><span>Suricata</span><span>Zeek</span><span>tcpdump</span><span>Wireshark</span><span>Scapy</span>
+          <span>Defense-in-depth</span><span>Incident handling</span><span>Metasploit</span><span>netcat</span><span>John the Ripper</span>
+          <span>Cain & Abel</span><span>hashcat</span><span>aircrack-ng</span><span>PowerShell (basic)</span><span>Hardening</span>
+          <span>Crypto</span><span>Access control</span><span>Group Policy</span><span>Patching</span><span>Change control</span><span>Smart Deploy</span>
+        </p>
+        <div class="kicker">Platforms</div>
+        <p class="taglist"><span>Windows</span><span>macOS</span><span>iOS/iPadOS</span><span>Unix/Linux</span></p>
+        <div class="kicker">Other</div>
+        <p class="taglist">
+          <span>Microsoft Office</span><span>Google Workspace</span><span>Adobe CC</span><span>WordPress</span><span>HTML/CSS</span>
+          <span>JavaScript</span><span>Documentation</span><span>Training</span><span>Communication</span><span>Problem-solving</span>
+        </p>
+        <div class="kicker">Soft Skills</div>
+        <p class="taglist"><span>Leadership</span><span>Adaptable</span><span>Relationship building</span><span>Team building</span><span>Lifelong learner</span></p>
+      </section>
+
+      <section>
+        <h2>Other Experience</h2>
+        <h3>Athletic Director — Hanalani Schools (2017–2021)</h3>
+        <ul>
+          <li>Led a 230‑athlete program to two state championships; hired and trained successor.</li>
+        </ul>
+        <h3>Pastor — Christ’s Church at Kapolei (1998–2015)</h3>
+        <ul>
+          <li>Grew a small group to 75 members; oversaw a 200‑member organization; navigated complex board challenges.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      © 2025 Arlen Nagata • Built from resume data • Theme by ChatGPT
+    </footer>
+  </div>
 </body>
 </html>
